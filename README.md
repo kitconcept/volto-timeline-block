@@ -15,10 +15,11 @@ Volto add-on for timeline block
 The Volto-timeline-block is a Volto add-on developed by kitconcept that enables the integration of interactive timeline blocks in Volto page.
 
 ## Features
-    -   Interactive Timelines: Easily create and manage timelines to display events or content chronologically.
-	-	Customization: Offers options to tailor the appearance and behavior of timeline blocks to fit the site’s design and user needs.
-	-	Responsive Design: Ensures timelines are accessible and visually appealing across various devices and screen sizes.
-	-	User-Friendly Interface: Provides an intuitive interface for editors to add, edit, and organize timeline entries without requiring technical expertise.
+
+-	Interactive Timelines: Easily create and manage timelines to display events or content chronologically.
+- Customization: Offers options to tailor the appearance and behavior of timeline blocks to fit the site’s design and user needs.
+- Responsive Design: Ensures timelines are accessible and visually appealing across various devices and screen sizes.
+- User-Friendly Interface: Provides an intuitive interface for editors to add, edit, and organize timeline entries without requiring technical expertise.
 
 ## Installation
 
