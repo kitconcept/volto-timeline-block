@@ -3,7 +3,14 @@ import PropTypes from 'prop-types';
 import { isEmpty } from 'lodash';
 import cx from 'classnames';
 import { Message } from 'semantic-ui-react';
-import { useIntl, messages } from 'react-intl';
+import { useIntl, defineMessages } from 'react-intl';
+
+const messages = defineMessages({
+  PleaseAddTimeline: {
+    id: 'PleaseAddTimeline',
+    defaultMessage: 'Please Add Timeline',
+  },
+});
 
 const TimelineTemplate = ({ items, isEditMode }) => {
   const intl = useIntl();
