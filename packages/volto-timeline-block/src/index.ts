@@ -5,7 +5,6 @@ import { defaultStylingSchema } from './components/Timeline/schema';
 import TimelineTemplate from './components/Listing/TimelineTemplate';
 import blockConfig from './components/Timeline';
 
-
 declare module '@plone/types' {
   export interface BlocksConfigData {
     timeline: BlockConfigBase;

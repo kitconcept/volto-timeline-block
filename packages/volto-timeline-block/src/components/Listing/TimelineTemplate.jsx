@@ -1,6 +1,5 @@
 import { useRef } from 'react';
 import cx from 'classnames';
-import { Message } from 'semantic-ui-react';
 import { useIntl, defineMessages } from 'react-intl';
 
 const messages = defineMessages({

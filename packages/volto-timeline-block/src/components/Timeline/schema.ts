@@ -86,7 +86,6 @@ export const layoutSchema = (props: BlockEditProps) => {
         type: 'timeline',
         widget: 'object_list',
         schema: timelineSchema(props),
-
       },
     },
     required: ['data'],
@@ -125,4 +124,3 @@ export const defaultStylingSchema = ({ schema, formData, intl }) => {
 
   return schema;
 };
-
