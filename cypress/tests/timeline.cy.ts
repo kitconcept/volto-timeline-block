@@ -12,7 +12,7 @@ context('Example Acceptance Tests', () => {
       cy.intercept('GET', '/**/document*').as('content');
     });
 
-    it('As editor I can add edit a Page', function () {
+    it('As editor I can add edit a Page and add a timeline block', function () {
       cy.visit('/document');
       cy.navigate('/document/edit');
 
