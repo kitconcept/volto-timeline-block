@@ -1,30 +1,42 @@
-# volto-timeline-block (@kitconcept/volto-timeline-block)
+# volto-timeline-block (volto-timeline-block)
 
-Volto add-on for timeline block
+A new timeline block for Volto
 
-[![npm](https://img.shields.io/npm/v/@kitconcept/volto-timeline-block)](https://www.npmjs.com/package/@kitconcept/volto-timeline-block)
+[![npm](https://img.shields.io/npm/v/volto-timeline-block)](https://www.npmjs.com/package/volto-timeline-block)
 [![](https://img.shields.io/badge/-Storybook-ff4785?logo=Storybook&logoColor=white&style=flat-square)](https://kitconcept.github.io/volto-timeline-block/)
 [![Code analysis checks](https://github.com/kitconcept/volto-timeline-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-timeline-block/actions/workflows/code.yml)
 [![Unit tests](https://github.com/kitconcept/volto-timeline-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-timeline-block/actions/workflows/unit.yml)
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://kitconcept.com/kitconcept-white.svg">
-  <img width="300" alt="kitconcept, GmbH" src="https://kitconcept.com/kitconcept-black.svg">
-</picture>
-
-The Volto-timeline-block is a Volto add-on developed by kitconcept that enables the integration of interactive timeline blocks in Volto page.
-
 ## Features
 
--	Interactive Timelines: Easily create and manage timelines to display events or content chronologically.
-- Customization: Offers options to tailor the appearance and behavior of timeline blocks to fit the site’s design and user needs.
-- Responsive Design: Ensures timelines are accessible and visually appealing across various devices and screen sizes.
-- User-Friendly Interface: Provides an intuitive interface for editors to add, edit, and organize timeline entries without requiring technical expertise.
+<!-- List your awesome features here -->
 
 ## Installation
 
 To install your project, you must choose the method appropriate to your version of Volto.
 
+
+### Volto 18 and later
+
+Add `volto-timeline-block` to your `package.json`:
+
+```json
+"dependencies": {
+    "volto-timeline-block": "*"
+}
+```
+
+Add `volto-timeline-block` to your `volto.config.js`:
+
+```javascript
+const addons = ['volto-timeline-block'];
+```
+
+If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
+
+```javascript
+const theme = 'volto-timeline-block';
+```
 
 ### Volto 17 and earlier
 
@@ -32,19 +44,19 @@ Create a new Volto project (you can skip this step if you already have one):
 
 ```
 npm install -g yo @plone/generator-volto
-yo @plone/volto my-volto-project --addon @kitconcept/volto-timeline-block
+yo @plone/volto my-volto-project --addon volto-timeline-block
 cd my-volto-project
 ```
 
-Add `@kitconcept/volto-timeline-block` to your package.json:
+Add `volto-timeline-block` to your package.json:
 
 ```JSON
 "addons": [
-    "@kitconcept/volto-timeline-block"
+    "volto-timeline-block"
 ],
 
 "dependencies": {
-    "@kitconcept/volto-timeline-block": "*"
+    "volto-timeline-block": "*"
 }
 ```
 
@@ -60,28 +72,6 @@ Start volto with:
 yarn start
 ```
 
-### Volto 18 and later
-
-Add `@kitconcept/volto-timeline-block` to your `package.json`:
-
-```json
-"dependencies": {
-    "@kitconcept/volto-timeline-block": "*"
-}
-```
-
-Add `@kitconcept/volto-timeline-block` to your `volto.config.js`:
-
-```javascript
-const addons = ['@kitconcept/volto-timeline-block'];
-```
-
-If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
-
-```javascript
-const theme = '@kitconcept/volto-timeline-block';
-```
-
 ## Test installation
 
 Visit http://localhost:3000/ in a browser, login, and check the awesome new features.
@@ -93,11 +83,29 @@ The development of this add-on is done in isolation using a new approach using p
 For this reason, it only works with pnpm and Volto 18 (currently in alpha).
 
 
-### Pre-requisites
+### Prerequisites ✅
 
--   [Node.js](https://6.docs.plone.org/install/create-project.html#node-js)
--   [Make](https://6.docs.plone.org/install/create-project.html#make)
--   [Docker](https://6.docs.plone.org/install/create-project.html#docker)
+-   An [operating system](https://6.docs.plone.org/install/create-project-cookieplone.html#prerequisites-for-installation) that runs all the requirements mentioned.
+-   [nvm](https://6.docs.plone.org/install/create-project-cookieplone.html#nvm)
+-   [Node.js and pnpm](https://6.docs.plone.org/install/create-project.html#node-js) 24
+-   [Make](https://6.docs.plone.org/install/create-project-cookieplone.html#make)
+-   [Git](https://6.docs.plone.org/install/create-project-cookieplone.html#git)
+-   [Docker](https://docs.docker.com/get-started/get-docker/) (optional)
+
+### Installation 🔧
+
+1.  Clone this repository, then change your working directory.
+
+    ```shell
+    git clone git@github.com:kitconcept/volto-timeline-block.git
+    cd volto-timeline-block
+    ```
+
+2.  Install this code base.
+
+    ```shell
+    make install
+    ```
 
 
 ### Make convenience commands
@@ -208,6 +216,6 @@ make acceptance-test
 
 The project is licensed under the MIT license.
 
-## Credits and Acknowledgements 🙏
+## Credits and acknowledgements 🙏
 
-Crafted with care by **Generated using [Cookieplone (0.8.3)](https://github.com/plone/cookieplone) and [cookiecutter-plone (1574aa3)](https://github.com/plone/cookiecutter-plone/commit/1574aa3d10ff257b33d59e3fd6f815a163fbfc0f) on 2025-02-06 19:24:15.021648**. A special thanks to all contributors and supporters!
+Generated using [Cookieplone (0.9.10)](https://github.com/plone/cookieplone) and [cookieplone-templates (eae593d)](https://github.com/plone/cookieplone-templates/commit/eae593d854b137cc3ab915e1c638170cbdfb3a78) on 2025-11-24 19:01:21.809430. A special thanks to all contributors and supporters!

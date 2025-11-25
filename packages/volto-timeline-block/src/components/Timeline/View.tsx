@@ -1,25 +1,32 @@
 import { useRef } from 'react';
 import cx from 'classnames';
-import { Message } from 'semantic-ui-react';
-import { useIntl, defineMessages } from 'react-intl';
+import { defineMessages, useIntl } from 'react-intl';
+import type { BlockViewProps } from '@plone/types';
 
 const messages = defineMessages({
   PleaseAddTimeline: {
-    id: 'PleaseAddTimeline',
-    defaultMessage: 'Please Add Timeline',
+    id: 'Please add Timeline contents here',
+    defaultMessage: 'Please add Timeline contents here',
   },
 });
-
-const TimelineTemplate = ({ items, isEditMode }) => {
+type timelineItem = {
+  content: string;
+  time?: string;
+  '@id': string;
+}[];
+const TimelineView = (props: BlockViewProps) => {
   const intl = useIntl();
   const index = useRef(0);
 
+  const { isEditMode } = props;
+  const data = props.data.data as timelineItem;
   return (
     <>
       <div className="timeline-block">
         <ul className="timeline">
-          {Array.isArray(items) && items.length > 0
-            ? items.map((item, count) => {
+          {Array.isArray(data) && data.length > 0
+            ? data.length > 0 &&
+              data.map((item, count) => {
                 index.current = count;
                 const positions = index.current % 2 === 0 ? 'right' : 'left';
 
@@ -32,16 +39,16 @@ const TimelineTemplate = ({ items, isEditMode }) => {
                       <span
                         className={cx('timeline-dot', ['outlined', 'gap'])}
                       ></span>
-                      {items.length - 1 > count && (
+                      {data.length - 1 > count && (
                         <span className="timeline-connector"></span>
                       )}
                     </div>
 
                     <div className={cx('timeline-content', positions)}>
-                      {item.title && (
-                        <div className="timeline-time">{item.title}</div>
+                      {item.time && (
+                        <div className="timeline-time">{item.time}</div>
                       )}
-                      <div className="timeline-data">{item.description}</div>
+                      <div className="timeline-data">{item.content}</div>
                     </div>
                   </li>
                 );
@@ -57,4 +64,4 @@ const TimelineTemplate = ({ items, isEditMode }) => {
   );
 };
 
-export default TimelineTemplate;
+export default TimelineView;

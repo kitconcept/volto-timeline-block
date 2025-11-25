@@ -24,8 +24,9 @@ GIT_FOLDER=$(CURRENT_DIR)/.git
 PLONE_VERSION=6
 DOCKER_IMAGE=plone/server-dev:${PLONE_VERSION}
 DOCKER_IMAGE_ACCEPTANCE=plone/server-acceptance:${PLONE_VERSION}
+API_PATH ?= http://127.0.0.1:55001/plone
 
-ADDON_NAME='@kitconcept/volto-timeline-block'
+ADDON_NAME='volto-timeline-block'
 
 .PHONY: help
 help: ## Show this help
@@ -97,8 +98,8 @@ test: ## Run unit tests
 .PHONY: ci-test
 ci-test: ## Run unit tests in CI
 	# Unit Tests need the i18n to be built
-	VOLTOCONFIG=$(pwd)/volto.config.js pnpm --filter @plone/volto i18n
-	CI=1 RAZZLE_JEST_CONFIG=$(CURRENT_DIR)/jest-addon.config.js pnpm --filter @plone/volto test -- --passWithNoTests
+	VOLTOCONFIG=$(CURRENT_DIR)/volto.config.js pnpm --filter @plone/volto i18n
+	CI=1 pnpm run test --passWithNoTests
 
 .PHONY: backend-docker-start
 backend-docker-start:	## Starts a Docker-based backend for development
@@ -120,11 +121,11 @@ storybook-build: ## Build Storybook
 ## Acceptance
 .PHONY: acceptance-frontend-dev-start
 acceptance-frontend-dev-start: ## Start acceptance frontend in development mode
-	RAZZLE_API_PATH=http://127.0.0.1:55001/plone NODE_OPTIONS=--dns-result-order=ipv4first pnpm start
+	RAZZLE_API_PATH=http://127.0.0.1:55001/plone pnpm start
 
 .PHONY: acceptance-frontend-prod-start
 acceptance-frontend-prod-start: ## Start acceptance frontend in production mode
-	RAZZLE_API_PATH=http://127.0.0.1:55001/plone pnpm build && pnpm start:prod
+	RAZZLE_API_PATH=$(API_PATH) pnpm build && pnpm start:prod
 
 .PHONY: acceptance-backend-start
 acceptance-backend-start: ## Start backend acceptance server
@@ -140,4 +141,4 @@ acceptance-test: ## Start Cypress in interactive mode
 
 .PHONY: ci-acceptance-test
 ci-acceptance-test: ## Run cypress tests in headless mode for CI
-	pnpm --filter @plone/volto exec cypress run --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}'
+	pnpm --filter @plone/volto exec cypress run --config-file $(CURRENT_DIR)/cypress.config.js --config specPattern=$(CURRENT_DIR)'/cypress/tests/**/*.{js,jsx,ts,tsx}' --env API_PATH="$(API_PATH)"

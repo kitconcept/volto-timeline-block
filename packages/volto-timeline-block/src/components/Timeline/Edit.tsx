@@ -1,20 +1,10 @@
-import React from 'react';
-
-import TimelineView from './View.tsx';
-import { SidebarPortal, BlockDataForm } from '@plone/volto/components';
+import SidebarPortal from '@plone/volto/components/manage/Sidebar/SidebarPortal';
+import BlockDataForm from '@plone/volto/components/manage/Form/BlockDataForm';
 import { layoutSchema } from './schema';
-import type { timelineData } from './View.tsx';
+import TimelineView from './View';
 import type { BlockEditProps } from '@plone/types';
 
-interface timelineEditProps extends BlockEditProps {
-  '@type': string;
-  data: timelineData;
-  block: string;
-  onChangeBlock: (blockId: string, newData: timelineData) => void;
-  selected: boolean;
-}
-
-const TimelineEdit = (props: timelineEditProps) => {
+const TimelineEdit = (props: BlockEditProps) => {
   const { data, block, onChangeBlock, selected } = props;
 
   return (

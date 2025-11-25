@@ -1,7 +1,7 @@
 {
-  "name": "@kitconcept/volto-timeline-block",
+  "name": "volto-timeline-block",
   "version": "1.0.0-alpha.0",
-  "description": "Volto add-on for timeline block",
+  "description": "A new timeline block for Volto",
   "main": "src/index.ts",
   "license": "MIT",
   "keywords": [
@@ -10,11 +10,11 @@
     "plone",
     "react"
   ],
-  "author": "Kitconcept GmbH",
+  "author": "Kitconcept, Gmbh",
   "homepage": "https://github.com/kitconcept/volto-timeline-block#readme",
   "repository": {
     "type": "git",
-    "url": "git@github.com:kitconcept/volto-timeline-block.git"
+    "url": "git@github.com:kitconcept/volto-timeline-block"
   },
   "publishConfig": {
     "access": "public"
@@ -26,13 +26,21 @@
     "release-major-alpha": "release-it major --preRelease=alpha",
     "release-alpha": "release-it --preRelease=alpha"
   },
+  "addons": [],
   "dependencies": {},
   "peerDependencies": {
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@plone/scripts": "^3.6.1",
-    "release-it": "^17.1.1"
+    "@plone/registry": "workspace:*",
+    "@plone/scripts": "workspace:*",
+    "@plone/types": "workspace:*",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "^5.7.3",
+    "@testing-library/react": "^16.2.0",
+    "release-it": "^19.0.5",
+    "vitest": "^3.1.2"
   }
 }

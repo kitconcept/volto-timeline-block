@@ -1,13 +1,8 @@
 import { defineMessages } from 'react-intl';
-
-import { cloneDeepSchema } from '@plone/volto/helpers/Utils/Utils';
 import { addStyling } from '@plone/volto/helpers/Extensions/withBlockSchemaEnhancer';
 import config from '@plone/volto/registry';
-import type { BlockEditProps, JSONSchema } from '@plone/types';
+import type { BlockEditProps } from '@plone/types';
 
-interface timelineSchemaProps extends JSONSchema {
-  addMessage: string;
-}
 const messages = defineMessages({
   Default: {
     defaultMessage: 'Default',
@@ -74,13 +69,6 @@ const timelineSchema = (props: BlockEditProps) => {
   };
 };
 
-const toggleIconField = (schema: timelineSchemaProps) => {
-  const cloned = cloneDeepSchema(schema);
-  cloned.fieldsets[0].fields = [...cloned.fieldsets[0].fields];
-
-  return cloned;
-};
-
 export const layoutSchema = (props: BlockEditProps) => {
   const intl = props.intl;
   return {
@@ -96,11 +84,11 @@ export const layoutSchema = (props: BlockEditProps) => {
       data: {
         title: intl.formatMessage(messages.timeline),
         type: 'timeline',
+        widget: 'object_list',
         schema: timelineSchema(props),
-        schemaExtender: toggleIconField,
+
       },
     },
-
     required: ['data'],
   };
 };
@@ -122,7 +110,7 @@ export const defaultStylingSchema = ({ schema, formData, intl }) => {
   addStyling({ schema, intl });
 
   const stylingIndex = schema.fieldsets.findIndex(
-    (item: { id: string }) => item.id === 'styling',
+    (item) => item.id === 'styling',
   );
   schema.fieldsets[stylingIndex].fields = [
     ...schema.fieldsets[stylingIndex].fields,
@@ -138,9 +126,3 @@ export const defaultStylingSchema = ({ schema, formData, intl }) => {
   return schema;
 };
 
-export const removeStylingSchema = ({ schema, formData, intl }) => {
-  schema.fieldsets = schema.fieldsets.filter(
-    (item: { id: string }) => item.id !== 'styling',
-  );
-  return schema;
-};
