@@ -15,3 +15,53 @@ msgstr ""
 "Language-Name: Português do Brasil\n"
 "Preferred-Encodings: utf-8\n"
 "Domain: volto\n"
+
+#. Default: "Background color"
+#: components/Timeline/schema
+msgid "Background color"
+msgstr ""
+
+#. Default: "Please add Timeline contents here"
+#: components/Timeline/View
+msgid "Please add Timeline contents here"
+msgstr ""
+
+#. Default: "Please Add Timeline"
+#: components/Listing/TimelineTemplate
+msgid "PleaseAddTimeline"
+msgstr ""
+
+#. Default: "Timeline"
+#: components/Timeline/schema
+msgid "Timeline"
+msgstr ""
+
+#. Default: "Add Timeline"
+#: components/Timeline/schema
+msgid "addTimeline"
+msgstr ""
+
+#. Default: "Description"
+#: components/Timeline/schema
+msgid "content"
+msgstr ""
+
+#. Default: "Default"
+#: components/Timeline/schema
+msgid "default"
+msgstr ""
+
+#. Default: "Title"
+#: components/Timeline/schema
+msgid "time"
+msgstr ""
+
+#. Default: "Timeline"
+#: components/Timeline/schema
+msgid "timeline"
+msgstr ""
+
+#. Default: "Title"
+#: components/Timeline/schema
+msgid "title"
+msgstr ""
