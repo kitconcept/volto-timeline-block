@@ -1,4 +1,4 @@
-.timeline-block .timeline {
+.block.timeline .timeline-list {
   .timeline-item {
     position: relative;
     display: flex;
@@ -20,13 +20,14 @@
       align-items: center;
 
       .timeline-dot {
-        display: flex;
-        align-self: baseline;
-        padding: 15px;
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+        stroke-width: 1px;
+        stroke: #000;
         border: 1px solid black;
         border-radius: 50%;
         margin: 25px 0;
-        background-color: transparent;
       }
 
       .timeline-connector {
@@ -40,6 +41,12 @@
       flex: 1;
       margin: 25px 0;
 
+      .timeline-data {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 43px; 
+      }
+
       &.right {
         text-align: right;
         .timeline-data,
@@ -47,6 +54,7 @@
           margin-right: 48px;
         }
       }
+
       &.left {
         .timeline-data,
         .timeline-time {
@@ -55,13 +63,15 @@
       }
 
       .timeline-time {
-        margin-bottom: 25px;
-        color: #000;
-        font-weight: bold;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 30px;
+        padding-bottom: 25px;
       }
     }
   }
 }
+
 .timeline-block-placeholder {
   padding: 20px;
   background-color: $veryLightGrey;

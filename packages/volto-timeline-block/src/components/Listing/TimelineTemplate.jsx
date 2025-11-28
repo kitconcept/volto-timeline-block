@@ -9,14 +9,14 @@ const messages = defineMessages({
   },
 });
 
-const TimelineTemplate = ({ items, isEditMode }) => {
+const TimelineTemplate = ({ items, isEditMode, className, style }) => {
   const intl = useIntl();
   const index = useRef(0);
 
   return (
     <>
-      <div className="timeline-block">
-        <ul className="timeline">
+      <div style={style} className={cx('block timeline', className)}>
+        <ul className="timeline-list">
           {Array.isArray(items) && items.length > 0
             ? items.map((item, count) => {
                 index.current = count;
@@ -31,9 +31,7 @@ const TimelineTemplate = ({ items, isEditMode }) => {
                       <span
                         className={cx('timeline-dot', ['outlined', 'gap'])}
                       ></span>
-                      {items.length - 1 > count && (
-                        <span className="timeline-connector"></span>
-                      )}
+                      <span className="timeline-connector"></span>
                     </div>
 
                     <div className={cx('timeline-content', positions)}>

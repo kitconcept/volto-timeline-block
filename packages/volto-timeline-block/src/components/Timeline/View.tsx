@@ -18,12 +18,12 @@ const TimelineView = (props: BlockViewProps) => {
   const intl = useIntl();
   const index = useRef(0);
 
-  const { isEditMode } = props;
+  const { isEditMode, className, style } = props;
   const data = props.data.data as timelineItem;
   return (
     <>
-      <div className="timeline-block">
-        <ul className="timeline">
+      <div style={style} className={cx('block timeline', className)}>
+        <ul className="timeline-list">
           {Array.isArray(data) && data.length > 0
             ? data.length > 0 &&
               data.map((item, count) => {
@@ -39,16 +39,14 @@ const TimelineView = (props: BlockViewProps) => {
                       <span
                         className={cx('timeline-dot', ['outlined', 'gap'])}
                       ></span>
-                      {data.length - 1 > count && (
-                        <span className="timeline-connector"></span>
-                      )}
+                      <span className="timeline-connector"></span>
                     </div>
 
                     <div className={cx('timeline-content', positions)}>
                       {item.time && (
                         <div className="timeline-time">{item.time}</div>
                       )}
-                      <div className="timeline-data">{item.content}</div>
+                      <p className="timeline-data">{item.content}</p>
                     </div>
                   </li>
                 );
