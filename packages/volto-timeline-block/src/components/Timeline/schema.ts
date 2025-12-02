@@ -57,7 +57,7 @@ const timelineSchema = (props: BlockEditProps) => {
 
       content: {
         title: intl.formatMessage(messages.content),
-        type: 'Text',
+        widget: 'textarea',
       },
       time: {
         title: intl.formatMessage(messages.time),
