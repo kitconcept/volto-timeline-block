@@ -1,4 +1,4 @@
-# volto-timeline-block (volto-timeline-block)
+# @kitconcept/volto-timeline-block (volto-timeline-block)
 
 A new timeline block for Volto
 
