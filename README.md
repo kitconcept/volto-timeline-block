@@ -22,20 +22,20 @@ Add `volto-timeline-block` to your `package.json`:
 
 ```json
 "dependencies": {
-    "volto-timeline-block": "*"
+    "@kitconcept/volto-timeline-block": "*"
 }
 ```
 
 Add `volto-timeline-block` to your `volto.config.js`:
 
 ```javascript
-const addons = ['volto-timeline-block'];
+const addons = ['"@kitconcept/volto-timeline-block'];
 ```
 
 If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
 
 ```javascript
-const theme = 'volto-timeline-block';
+const theme = '"@kitconcept/volto-timeline-block';
 ```
 
 ### Volto 17 and earlier
@@ -52,11 +52,11 @@ Add `volto-timeline-block` to your package.json:
 
 ```JSON
 "addons": [
-    "volto-timeline-block"
+    ""@kitconcept/volto-timeline-block"
 ],
 
 "dependencies": {
-    "volto-timeline-block": "*"
+    ""@kitconcept/volto-timeline-block": "*"
 }
 ```
 
