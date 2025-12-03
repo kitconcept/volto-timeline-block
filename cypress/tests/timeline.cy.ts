@@ -55,7 +55,7 @@ context('Example Acceptance Tests', () => {
       cy.wait('@content');
       cy.get('#toolbar-save').click();
 
-      cy.get('.timeline-block ul li').should('have.length', 3);
+      cy.get('.block.timeline ul li').should('have.length', 3);
     });
   });
 });
