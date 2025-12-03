@@ -15,15 +15,15 @@ importers:
       '@kitconcept/volto-light-theme':
         specifier: ^7.6.1
         version: 7.6.2(b617310a9bb97e3e5a6e81e2c170ddb2)
+      '@kitconcept/volto-timeline-block':
+        specifier: workspace:*
+        version: link:packages/volto-timeline-block
       '@plone/registry':
         specifier: workspace:*
         version: link:core/packages/registry
       '@plone/volto':
         specifier: workspace:*
         version: link:core/packages/volto
-      volto-timeline-block:
-        specifier: workspace:*
-        version: link:packages/volto-timeline-block
     devDependencies:
       mrs-developer:
         specifier: ^2.2.0

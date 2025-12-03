@@ -1,5 +1,5 @@
 {
-  "name": "volto-timeline-block",
+  "name": "@kitconcept/volto-timeline-block",
   "version": "1.0.0-alpha.0",
   "description": "A new timeline block for Volto",
   "main": "src/index.ts",

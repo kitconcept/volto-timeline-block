@@ -1,5 +1,5 @@
 {
-  "name": "volto-timeline-block-dev",
+  "name": "@kitconcept/volto-timeline-block-dev",
   "version": "1.0.0-alpha.0",
   "description": "A new timeline block for Volto",
   "author": "Kitconcept, Gmbh",
@@ -36,7 +36,7 @@
     "@kitconcept/volto-light-theme": "^7.6.1",
     "@plone/volto": "workspace:*",
     "@plone/registry": "workspace:*",
-    "volto-timeline-block": "workspace:*"
+    "@kitconcept/volto-timeline-block": "workspace:*"
   },
   "devDependencies": {
     "mrs-developer": "^2.2.0"
