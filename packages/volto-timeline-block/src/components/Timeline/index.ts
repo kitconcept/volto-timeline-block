@@ -2,7 +2,7 @@ import type { BlockConfigBase } from '@plone/types';
 import timelineSVG from '@plone/volto/icons/settings.svg';
 import TimelineEdit from './Edit';
 import TimelineView from './View';
-import { layoutSchema, ButtonStylingSchema } from './schema';
+import { layoutSchema, TimelineStylingSchema } from './schema';
 
 const blockConfig: BlockConfigBase = {
   id: 'timeline',
@@ -15,7 +15,7 @@ const blockConfig: BlockConfigBase = {
   mostUsed: false,
   sidebarTab: 1,
   schema: layoutSchema,
-  schemaEnhancer: ButtonStylingSchema,
+  schemaEnhancer: TimelineStylingSchema,
 };
 
 export default blockConfig;

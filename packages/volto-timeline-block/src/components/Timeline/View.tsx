@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import cx from 'classnames';
 import { defineMessages, useIntl } from 'react-intl';
 import type { BlockViewProps } from '@plone/types';
@@ -16,7 +15,6 @@ type timelineItem = {
 }[];
 const TimelineView = (props: BlockViewProps) => {
   const intl = useIntl();
-  const index = useRef(0);
 
   const { isEditMode, className, style } = props;
   const data = props.data.data as timelineItem;
@@ -25,10 +23,8 @@ const TimelineView = (props: BlockViewProps) => {
       <div style={style} className={cx('block timeline', className)}>
         <ul className="timeline-list">
           {Array.isArray(data) && data.length > 0
-            ? data.length > 0 &&
-              data.map((item, count) => {
-                index.current = count;
-                const positions = index.current % 2 === 0 ? 'right' : 'left';
+            ? data.map((item, count) => {
+                const positions = count % 2 === 0 ? 'right' : 'left';
 
                 return (
                   <li

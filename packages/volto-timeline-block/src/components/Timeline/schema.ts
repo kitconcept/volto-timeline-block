@@ -91,7 +91,7 @@ export const layoutSchema = (props: BlockEditProps) => {
     required: ['data'],
   };
 };
-export const ButtonStylingSchema = ({ schema, formData, intl }) => {
+export const TimelineStylingSchema = ({ schema, formData, intl }) => {
   defaultStylingSchema({ schema, formData, intl });
   return schema;
 };
