@@ -1,10 +1,10 @@
 ---
 myst:
   html_meta:
-    "description": "volto-timeline-block Tutorials"
-    "property=og:description": "volto-timeline-block Tutorials"
-    "property=og:title": "volto-timeline-block Tutorials"
-    "keywords": "Plone, volto-timeline-block, tutorials"
+    "description": "@kitconcept/volto-timeline-block Tutorials"
+    "property=og:description": "@kitconcept/volto-timeline-block Tutorials"
+    "property=og:title": "@kitconcept/volto-timeline-block Tutorials"
+    "keywords": "Plone, @kitconcept/volto-timeline-block, tutorials"
 ---
 
 # Tutorials

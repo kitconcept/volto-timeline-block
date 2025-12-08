@@ -1,4 +1,4 @@
-# volto-timeline-block (volto-timeline-block)
+# volto-timeline-block (@kitconcept/volto-timeline-block)
 
 A new timeline block for Volto
 
@@ -18,24 +18,24 @@ To install your project, you must choose the method appropriate to your version 
 
 ### Volto 18 and later
 
-Add `volto-timeline-block` to your `package.json`:
+Add `@kitconcept/volto-timeline-block` to your `package.json`:
 
 ```json
 "dependencies": {
-    "volto-timeline-block": "*"
+    "@kitconcept/volto-timeline-block": "*"
 }
 ```
 
-Add `volto-timeline-block` to your `volto.config.js`:
+Add `@kitconcept/volto-timeline-block` to your `volto.config.js`:
 
 ```javascript
-const addons = ['volto-timeline-block'];
+const addons = ['@kitconcept/volto-timeline-block'];
 ```
 
 If this package provides a Volto theme, and you want to activate it, then add the following to your `volto.config.js`:
 
 ```javascript
-const theme = 'volto-timeline-block';
+const theme = '@kitconcept/volto-timeline-block';
 ```
 
 ### Volto 17 and earlier
@@ -44,19 +44,19 @@ Create a new Volto project (you can skip this step if you already have one):
 
 ```
 npm install -g yo @plone/generator-volto
-yo @plone/volto my-volto-project --addon volto-timeline-block
+yo @plone/volto my-volto-project --addon @kitconcept/volto-timeline-block
 cd my-volto-project
 ```
 
-Add `volto-timeline-block` to your package.json:
+Add `@kitconcept/volto-timeline-block` to your package.json:
 
 ```JSON
 "addons": [
-    "volto-timeline-block"
+    "@kitconcept/volto-timeline-block"
 ],
 
 "dependencies": {
-    "volto-timeline-block": "*"
+    "@kitconcept/volto-timeline-block": "*"
 }
 ```
 

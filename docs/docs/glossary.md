@@ -7,7 +7,7 @@ myst:
     "keywords": "Plone, documentation, glossary, term, definition"
 ---
 
-This glossary provides example terms and definitions relevant to **volto-timeline-block**.
+This glossary provides example terms and definitions relevant to **@kitconcept/volto-timeline-block**.
 A new timeline block for Volto
 
 ```{note}

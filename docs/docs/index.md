@@ -3,13 +3,13 @@ myst:
   html_meta:
     "description": "A new timeline block for Volto"
     "property=og:description": "A new timeline block for Volto"
-    "property=og:title": "volto-timeline-block"
-    "keywords": "volto-timeline-block, documentation, A new timeline block for Volto"
+    "property=og:title": "@kitconcept/volto-timeline-block"
+    "keywords": "@kitconcept/volto-timeline-block, documentation, A new timeline block for Volto"
 ---
 
-# volto-timeline-block
+# @kitconcept/volto-timeline-block
 
-Welcome to the documentation for volto-timeline-block!
+Welcome to the documentation for @kitconcept/volto-timeline-block!
 A new timeline block for Volto
 
 This scaffold provides a ready-to-use environment for creating comprehensive documentation for {term}`Plone` projects, based on {term}`Plone Sphinx Theme`.

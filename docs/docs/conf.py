@@ -1,5 +1,5 @@
 # Configuration file for the Sphinx documentation builder.
-# volto-timeline-block build configuration file
+# @kitconcept/volto-timeline-block build configuration file
 
 
 # -- Path setup --------------------------------------------------------------
@@ -19,7 +19,7 @@ from plone_sphinx_theme import __version__
 
 # -- Project information -----------------------------------------------------
 
-project = "volto-timeline-block"
+project = "@kitconcept/volto-timeline-block"
 author = "Kitconcept, Gmbh"
 trademark_name = "kitconcept"
 now = datetime.now()
@@ -177,7 +177,7 @@ html_theme_options = {
         # },
     ],
     "logo": {
-        "text": "volto-timeline-block",
+        "text": "@kitconcept/volto-timeline-block",
     },
     "navigation_with_keys": True,
     "path_to_docs": "docs/docs",
@@ -286,7 +286,7 @@ mermaid_version = "11.2.0"
 ogp_site_url = "https://MY_READTHEDOCS_PROJECT_SLUG.readthedocs.io/"
 ogp_description_length = 200
 ogp_image = "https://MY_READTHEDOCS_PROJECT_SLUG/_static/MY_LOGO.svg"
-ogp_site_name = "volto-timeline-block Documentation"
+ogp_site_name = "@kitconcept/volto-timeline-block Documentation"
 ogp_type = "website"
 ogp_custom_meta_tags = [
     '<meta property="og:locale" content="en_US" />',
@@ -321,7 +321,7 @@ tippy_props = {
 # -- Options for HTML help output -------------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = "volto-timeline-blockDocumentation"
+htmlhelp_basename = "@kitconcept/volto-timeline-blockDocumentation"
 
 
 # -- Options for LaTeX output -------------------------------------------------
@@ -331,8 +331,8 @@ htmlhelp_basename = "volto-timeline-blockDocumentation"
 latex_documents = [
     (
         "index",
-        "volto-timeline-blockDocumentation.tex",
-        "volto-timeline-block Documentation",
+        "@kitconcept/volto-timeline-blockDocumentation.tex",
+        "@kitconcept/volto-timeline-block Documentation",
         "kitconcept community",
         "manual",
     ),

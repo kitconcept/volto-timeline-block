@@ -2,7 +2,7 @@
 name = "volto_timeline_block_Documentation"
 description = "A new timeline block for Volto"
 keywords = [
-    "volto-timeline-block",
+    "@kitconcept/volto-timeline-block",
     "documentation",
     "Plone",
     "Diátaxis",

@@ -1,10 +1,10 @@
 ---
 myst:
   html_meta:
-    "description": "volto-timeline-block Reference"
-    "property=og:description": "volto-timeline-block Reference"
-    "property=og:title": "volto-timeline-block Reference"
-    "keywords": "Plone, _volto-timeline-block,_ reference"
+    "description": "@kitconcept/volto-timeline-block Reference"
+    "property=og:description": "@kitconcept/volto-timeline-block Reference"
+    "property=og:title": "@kitconcept/volto-timeline-block Reference"
+    "keywords": "Plone, @kitconcept/volto-timeline-block,_ reference"
 ---
 
 # Reference

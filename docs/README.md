@@ -1,6 +1,6 @@
-# volto-timeline-block
+# @kitconcept/volto-timeline-block
 
-Documentation for volto-timeline-block.
+Documentation for @kitconcept/volto-timeline-block.
 A new timeline block for Volto
 
 This project provides a Sphinx-based documentation environment for your Plone project, powered by the [Plone Sphinx Theme](https://github.com/plone/plone-sphinx-theme).
@@ -59,7 +59,7 @@ make help
 ```
 
 
-## Customize the volto-timeline-block documentation
+## Customize the @kitconcept/volto-timeline-block documentation
 
 This section provides how-to guidance to customize your documentation.
 
