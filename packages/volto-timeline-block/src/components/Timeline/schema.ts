@@ -2,6 +2,7 @@ import { defineMessages } from 'react-intl';
 import { addStyling } from '@plone/volto/helpers/Extensions/withBlockSchemaEnhancer';
 import config from '@plone/volto/registry';
 import type { BlockEditProps } from '@plone/types';
+import type { IntlShape } from 'react-intl';
 
 const messages = defineMessages({
   Default: {
@@ -38,8 +39,13 @@ const messages = defineMessages({
   },
 });
 
-const timelineSchema = (props: BlockEditProps) => {
-  const intl = props.intl;
+const timelineSchema = ({
+  props,
+  intl,
+}: {
+  props: BlockEditProps;
+  intl: IntlShape;
+}) => {
   return {
     title: intl.formatMessage(messages.item),
     addMessage: intl.formatMessage(messages.addTimeline),
@@ -69,8 +75,13 @@ const timelineSchema = (props: BlockEditProps) => {
   };
 };
 
-export const layoutSchema = (props: BlockEditProps) => {
-  const intl = props.intl;
+export const layoutSchema = ({
+  props,
+  intl,
+}: {
+  props: BlockEditProps;
+  intl: IntlShape;
+}) => {
   return {
     title: intl.formatMessage(messages.title),
     fieldsets: [
@@ -85,7 +96,7 @@ export const layoutSchema = (props: BlockEditProps) => {
         title: intl.formatMessage(messages.timeline),
         type: 'timeline',
         widget: 'object_list',
-        schema: timelineSchema(props),
+        schema: timelineSchema({ props, intl }),
       },
     },
     required: ['data'],

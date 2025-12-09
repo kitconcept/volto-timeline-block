@@ -15,7 +15,6 @@ type timelineItem = {
 }[];
 const TimelineView = (props: BlockViewProps) => {
   const intl = useIntl();
-
   const { isEditMode, className, style } = props;
   const data = props.data.data as timelineItem;
   return (
@@ -25,7 +24,6 @@ const TimelineView = (props: BlockViewProps) => {
           {Array.isArray(data) && data.length > 0
             ? data.map((item, count) => {
                 const positions = count % 2 === 0 ? 'right' : 'left';
-
                 return (
                   <li
                     key={item['@id']}

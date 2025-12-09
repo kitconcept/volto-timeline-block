@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import cx from 'classnames';
 import { useIntl, defineMessages } from 'react-intl';
 
@@ -11,17 +10,13 @@ const messages = defineMessages({
 
 const TimelineTemplate = ({ items, isEditMode, className, style }) => {
   const intl = useIntl();
-  const index = useRef(0);
-
   return (
     <>
       <div style={style} className={cx('block timeline', className)}>
         <ul className="timeline-list">
           {Array.isArray(items) && items.length > 0
             ? items.map((item, count) => {
-                index.current = count;
-                const positions = index.current % 2 === 0 ? 'right' : 'left';
-
+                const positions = count % 2 === 0 ? 'right' : 'left';
                 return (
                   <li
                     key={item['@id']}
