@@ -14,7 +14,7 @@ const blockConfig: BlockConfigBase = {
   restricted: false,
   mostUsed: false,
   sidebarTab: 1,
-  schema: layoutSchema,
+  blockSchema: layoutSchema,
   schemaEnhancer: TimelineStylingSchema,
 };
 
