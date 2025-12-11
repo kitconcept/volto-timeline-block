@@ -12,22 +12,26 @@ A new timeline block for Volto
 Timeline Block 
 
 Edit mode : 
+<video controls src="packages/volto-timeline-block/assets/Screen Recording 2025-12-11 at 8.30.25 PM.mov" title="Timeline block edit mode"></video>
 
-https://github.com/user-attachments/assets/c635526d-1bb9-48c5-84d9-283605f23dc7
-
-View mode : <img width="1404" height="796" alt="Screenshot 2025-12-11 at 8 33 05 PM" src="https://github.com/user-attachments/assets/4ce44a38-4bf5-49f2-be2b-2850e2554529" />
-
-Listing Timeline 
-
-Edit mode : 
-
-https://github.com/user-attachments/assets/76172fc0-3dc9-4a76-8c47-ac9fa8152e95
-
-View mode : <img width="1406" height="796" alt="Screenshot 2025-12-11 at 8 34 34 PM" src="https://github.com/user-attachments/assets/95e73c90-d04c-4bc9-bff1-8343cfd1e70f" />
+View mode : 
+![Timeline block view mode](<packages/volto-timeline-block/assets/Screenshot 2025-12-11 at 8.33.05 PM.png>)
 
 
 
 ## Features
+
+### Timeline Block
+- **Visual Timeline Layout**: Display chronological events with alternating left/right positioning .
+- **Rich Content**: Add detailed descriptions to timeline items .
+- **Drag & Reorder**: Easily reorganize timeline events .
+- **Responsive Design**: Adapts to all screen sizes .
+- **Accessible**: Built with proper ARIA labels and keyboard navigation .
+
+### Listing Timeline Template
+- **Dynamic Content**: Auto-generates timelines from listing block queries .
+- **Flexible Filtering**: Use Plone's listing criteria to filter content .
+- **Any Content Type**: Works with News Items, Events, Pages, and custom types .
 
 <!-- List your awesome features here -->
 
