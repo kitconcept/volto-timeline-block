@@ -7,7 +7,31 @@ A new timeline block for Volto
 [![Code analysis checks](https://github.com/kitconcept/volto-timeline-block/actions/workflows/code.yml/badge.svg)](https://github.com/kitconcept/volto-timeline-block/actions/workflows/code.yml)
 [![Unit tests](https://github.com/kitconcept/volto-timeline-block/actions/workflows/unit.yml/badge.svg)](https://github.com/kitconcept/volto-timeline-block/actions/workflows/unit.yml)
 
+## Screencast and screenshot
+
+Timeline Block 
+
+Edit mode : 
+<video controls src="packages/volto-timeline-block/assets/Screen Recording 2025-12-11 at 8.30.25 PM.mov" title="Timeline block edit mode"></video>
+
+View mode : 
+![Timeline block view mode](<packages/volto-timeline-block/assets/Screenshot 2025-12-11 at 8.33.05 PM.png>)
+
+
+
 ## Features
+
+### Timeline Block
+- **Visual Timeline Layout**: Display chronological events with alternating left/right positioning .
+- **Rich Content**: Add detailed descriptions to timeline items .
+- **Drag & Reorder**: Easily reorganize timeline events .
+- **Responsive Design**: Adapts to all screen sizes .
+- **Accessible**: Built with proper ARIA labels and keyboard navigation .
+
+### Listing Timeline Template
+- **Dynamic Content**: Auto-generates timelines from listing block queries .
+- **Flexible Filtering**: Use Plone's listing criteria to filter content .
+- **Any Content Type**: Works with News Items, Events, Pages, and custom types .
 
 <!-- List your awesome features here -->
 
